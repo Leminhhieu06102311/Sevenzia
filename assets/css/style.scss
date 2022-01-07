@@ -276,6 +276,8 @@ $headerHeight: 12rem;
     }
     .footer__title {
         margin-bottom: 3rem;
+        margin-left: 3.3rem;
+        margin-right: 3.3rem;
     }
     .header__nav-img {
         width: 100%;
@@ -412,6 +414,9 @@ $headerHeight: 12rem;
 @media (max-width: 740px){
     .header {
         justify-content: space-around;
+    }
+    .header__nav-img img {
+        height: 50px;
     }
     .slider {
         height: 725px;
