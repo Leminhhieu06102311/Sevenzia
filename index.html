@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevenzia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+</head>
+<body>
+    <!-- START HEADER -->
+    <div class="header grid wide row">
+        <i class="fas fa-stream l-0" onclick="showOverlay()"></i>
+        <div class="header__nav" id="header">
+            <a href="" class="header__nav-img">
+                <img src="./assets/img/logo/logo.png" alt="logo">
+            </a>
+            <ul class="header__nav-list c-0 m-0">
+                <li class="header__nav-item nav-hover">
+                    <a href="">Sản phẩm</a>
+                    <i class="fas fa-sort-down c-0 m-0"></i>
+                    <i class="fas fa-caret-right l-0"></i>
+                    <ul class="sub-nav">
+                        <li class="sub-nav__item">
+                            <a href="">Sevenzia lover Club</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Jacket</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Hoodie</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Tee & Polo</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Sweater</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Short & Pants</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Cardigan</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Phụ Kiện</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-item">
+                    <a href="">Clearance SALE</a>
+
+                </li>
+                <li class="header__nav-item nav-hover">
+                    <a href="">Hướng dẫn</a>
+                    <i class="fas fa-sort-down c-0 m-0"></i>
+                    <i class="fas fa-caret-right l-0"></i>
+                    <ul class="sub-nav">
+                        <li class="sub-nav__item">
+                            <a href="">Hướng dẫn mua hàng</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Hướng dẫn đơn hàng SALE</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Hướng dẫn hủy đơn hàng</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Hướng dẫn đổi trả sản phẩm</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Hướng dẫn bảo quản</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-item nav-hover">
+                    <a href="">CSKH</a>
+                    <i class="fas fa-sort-down c-0 m-0"></i>
+                    <i class="fas fa-caret-right l-0"></i>
+                    <ul class="sub-nav">
+                        <li class="sub-nav__item">
+                            <a href="">Quy trình đổi/trả sản phẩm</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Chính sách bảo mật</a>
+                        </li>
+                        <li class="sub-nav__item">
+                            <a href="">Điều khoản</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="header__icon">
+            <div class="header__icon-search">
+                <i class="fas fa-search c-0"></i>
+            </div>
+            <div class="header__icon-user">
+                <i class="fas fa-user-plus"></i>
+                <ul class="user-sub">
+                    <a href="login.html" class="user-sub__login">Đăng nhập</a>
+                    <a href="register.html" class="user-sub__resgiter">Đăng kí</a>
+                </ul>
+            </div>
+            <a href="cart.html" class="header__icon-cart">
+                <i class="fas fa-shopping-bag c-0"></i>
+            </a>
+            <div class="sub-search">
+                <input type="text" placeholder="Tìm kiếm...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </div>
+    <!-- END HEADER -->
+    <!-- START SLIDER -->
+    <div class="slider grid">
+        <div class="slider__img active">
+            <img src="./assets/img/slider/slider_1.jpg" alt="" class="c-0">
+            <img src="./assets/img/slider/slider_1_mb.jpg" alt="" class="m-0 l-0 overlay-none">
+            <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>
+        <div class="slider__img">
+            <img src="./assets/img/slider/slider_2.jpg" alt="" class="c-0">
+            <img src="./assets/img/slider/slider_1_mb.jpg" alt="" class="m-0 l-0">
+        </div>
+        <div class="slider__img">
+            <img src="./assets/img/slider/slider_3.jpg" alt="" class="c-0">
+            <img src="./assets/img/slider/slider_1_mb.jpg" alt="" class="m-0 l-0">
+        </div>
+    </div>
+    <!-- END SLIDER -->
+    <!-- START SCROLL -->
+    <a href="#header" class="scroll grid c-0 m-0">
+        <i class="fas fa-arrow-circle-up"></i>
+    </a>
+    <!-- END SCROLL -->
+    <!-- START FOOTER -->
+    <div class="footer grid wide">
+        <div class="row">
+            <div class="footer__title col l-12 c-12 m-12">
+                <h2 class="footer__title-heading">SEVENZIA OFFICIAL STORE</h2>
+                <div class="footer__title-des">Address: 698 Luỹ Bán Bích, P. Tân Thành, Q. Tân Phú, TP.HCM</div>
+                <div class="footer__title-des">Phone number: 0985680707</div>
+                <div class="footer__title-des">Email: Sevenzia07@gmail.com</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer__brand l-12 c-12 m-12">
+                <p class="footer__brand-title col">@ Bản quyền thuộc về SEVENZIA Team | Cung cấp bởi Sapo</p>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    <div class="overlay l-0">
+        <div class="overlay-hidden" onclick="hideOverlay()"></div>
+        <ul class="header__nav-list-overlay">
+            <div class="header__nav-img l-0">
+                <img src="./assets/img/logo/logo.png" alt="logo">
+            </div>
+            <li class="header__nav-item">
+                <label for="show-menu">
+                    <span>Sản phẩm</span>
+                    <i class="fas fa-caret-right l-0 overlay-click"></i>
+                </label>
+                <input type="checkbox" id="show-menu" hidden>
+                <ul class="sub-nav sub-nav-overlay">
+                    <li class="sub-nav__item">
+                        <a href="">Sevenzia lover Club</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Jacket</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Hoodie</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Tee & Polo</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Sweater</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Short & Pants</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Cardigan</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Phụ Kiện</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__nav-item">
+                <label href="">
+                    <span>Clearance SALE</span>
+                </label>
+            </li>
+            <li class="header__nav-item">
+                <label for="show-menu-two">
+                    <span>Hướng dẫn</span>
+                    <i class="fas fa-caret-right l-0 overlay-click"></i>
+                </label>
+                <input type="checkbox" id="show-menu-two" hidden>
+                <ul class="sub-nav sub-nav-overlay">
+                    <li class="sub-nav__item">
+                        <a href="">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Hướng dẫn đơn hàng SALE</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Hướng dẫn hủy đơn hàng</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Hướng dẫn đổi trả sản phẩm</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Hướng dẫn bảo quản</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="header__nav-item">
+                <label for="show-menu-three">
+                    <span>CSKH</span>
+                    <i class="fas fa-caret-right l-0 overlay-click"></i>
+                </label>
+                <input type="checkbox" id="show-menu-three" hidden>
+                <ul class="sub-nav sub-nav-overlay">
+                    <li class="sub-nav__item">
+                        <a href="">Quy trình đổi/trả sản phẩm</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Chính sách bảo mật</a>
+                    </li>
+                    <li class="sub-nav__item">
+                        <a href="">Điều khoản</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
