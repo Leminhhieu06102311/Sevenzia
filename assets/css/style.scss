@@ -10,6 +10,10 @@ html {
     color: #29335b;
     scroll-behavior: smooth;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 $headerHeight: 12rem;
 
 .nav-hover:hover .sub-nav {
@@ -192,45 +196,106 @@ $headerHeight: 12rem;
         
     }
 }
+// .slider {
+//     height: 900px;
+//     width: 100%;
+//     display: flex;
+//     position: relative;
+//     overflow: hidden;
+//     &__img {
+//         position: absolute;
+//         img {
+//             position: relative;
+//             width: 100%;
+//             clip-path: circle(0.0% at 0 48%);
+//         }
+//     }
+//     &__img.active {
+//         img {
+//             transition: 1s;
+//             transition-property: clip-path;
+//             clip-path: circle(171.8% at 0 50%);
+//             width: 100%;
+//         }
+//     }
+//     .navigation {
+//         display: flex;
+//         justify-content: center;
+//         position: absolute;
+//         width: 100%;
+//         bottom: 0;
+//         z-index: 2;
+//         .btn {
+//             width: 40px;
+//             height: 15px;
+//             cursor: pointer;
+//             margin: 2rem;
+//             border-radius: .5rem;
+//             background-color:rgba(255,255,255, 0.3)
+//         }
+//         .btn.active {
+//             background-color: aquamarine;
+//         }
+//     }
+// }
+
 .slider {
-    height: 900px;
     width: 100%;
-    display: flex;
     position: relative;
-    overflow: hidden;
-    &__img {
+    user-select: none;
+    &__btn {
+        z-index: 4;
         position: absolute;
-        img {
-            position: relative;
-            width: 100%;
-            clip-path: circle(0.0% at 0 48%);
-        }
-    }
-    &__img.active {
-        img {
-            transition: 1s;
-            transition-property: clip-path;
-            clip-path: circle(171.8% at 0 50%);
-            width: 100%;
-        }
-    }
-    .navigation {
+        top: 50%;
         display: flex;
-        justify-content: center;
-        position: absolute;
         width: 100%;
+        justify-content: space-between;
+        div {
+            cursor: pointer;
+            width: 5rem;
+            font-size: 2rem;
+            height: 5rem;
+            align-items: center;
+            box-shadow: 2px 1px 6px #ccc ;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 2rem;
+            background-color: #fff;
+        }
+    }
+    &__dots {
+        position: absolute;
         bottom: 0;
         z-index: 2;
-        .btn {
-            width: 40px;
-            height: 15px;
-            cursor: pointer;
-            margin: 2rem;
-            border-radius: .5rem;
-            background-color:rgba(255,255,255, 0.3)
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        &-item.active {
+            background-color: #fff;
         }
-        .btn.active {
-            background-color: aquamarine;
+        
+        &-item {
+            cursor: pointer;
+            width: 2rem;
+            margin: 2rem;
+            border-radius: 50%;
+            height: 2rem;
+            background: rgba(255,255,255,0.3);
+        }
+    }
+    &__wraper {
+        width: 100%;
+        overflow: hidden;
+    }
+    &__main {
+        display: flex;
+        transition: all .5s linear;
+        &-item {
+            
+            width: auto;
+            flex: 1 0 100%;
+            
         }
     }
 }
@@ -397,9 +462,6 @@ $headerHeight: 12rem;
     .header__icon .sub-search {
         margin-top: 146px;
     }
-    .slider {
-        height: 450px;
-    }
     .header__icon-search {
         width: 23px;
     }
@@ -418,9 +480,6 @@ $headerHeight: 12rem;
     .header__nav-img img {
         height: 50px;
     }
-    .slider {
-        height: 725px;
-    }
     .footer__brand-title {
         font-size: 1.6rem;
         margin: 0 33px;
@@ -435,7 +494,7 @@ $headerHeight: 12rem;
         padding: 0;
     }
     .header__icon .user-sub {
-        transform: translateX(-87px);
+        transform: translateX(-114px);
         clip-path: circle(0.1% at 78% 0);
     }
     .header__icon .user-sub.user-active {

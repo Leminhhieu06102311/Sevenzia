@@ -1,23 +1,66 @@
-var slides = document.querySelectorAll('.slider__img')
-var btns = document.querySelectorAll('.btn')
-let currentSlide = 1;
-
-        var manualNav = function(manual) {
-            slides.forEach(function(slide) {
-                slide.classList.remove('active')
-            })
-            btns.forEach(function(slide) {
-                slide.classList.remove('active')
-            })
-            slides[manual].classList.add('active')
-            btns[manual].classList.add('active')
+// slider 
+window.addEventListener("load", function() {
+    const prevBtn = document.querySelector('.slider__btn-prev')
+    const nextBtn = document.querySelector('.slider__btn-next')
+    const mainSlide = document.querySelector('.slider__main')
+    const dots = document.querySelectorAll('.slider__dots-item')
+    const imgItems = document.querySelectorAll('.slider__main-item')
+    const widthImg = imgItems[0].offsetWidth;
+    var index = 0;
+    let positionX = 0;
+    var counter = 0;
+    setInterval(function(){
+        dots[counter].click();
+        counter++;
+        if(counter > 2) {
+            counter = 0;
         }
-        btns.forEach((btn, i) => {
-            btn.addEventListener("click", () => {
-                manualNav(i);
-                currentSlide = i;
+    },5000)
+    nextBtn.addEventListener("click",function() {
+        handleChangeSlide(1)
+    })
+    prevBtn.addEventListener("click",function() {
+        handleChangeSlide(-1)
+    })
+    dots.forEach(function(item,indexId){
+        item.addEventListener("click",function(e){
+            dots.forEach(function(el){
+                el.classList.remove('active')
             })
+            const slideIndex = e.target.dataset.id;
+            item.classList.add('active')
+            positionX = -1 * slideIndex * widthImg;
+            mainSlide.style.transform = `translate(${positionX}px)`;
+            index = slideIndex;
+            // console.log(`chi so : ${positionX}`)
+            // console.log(`slide index: ${slideIndex}`)
+            // console.log(`index : ${index}`)
         })
+    })
+    function handleChangeSlide(direction) {
+        if (direction === 1) {
+            if (index >= 2)
+            return;
+            // console.log(`index : ${index}`)
+            positionX -= widthImg;
+            mainSlide.style.transform = `translateX(${positionX}px)`
+            // console.log("next-slide", positionX)
+            index++;
+        } else if (direction === -1) {
+            if(index <= 0)
+            return;
+            positionX += widthImg;
+            mainSlide.style.transform = `translateX(${positionX}px)`
+            // console.log("prev-slide", positionX)
+            index--;
+            // console.log(`index : ${index}`)
+        }
+        dots.forEach(function(el){
+            el.classList.remove('active')
+        })
+        dots[index].classList.add('active')
+    }
+})
 
 // search header 
 var searchHeader = document.querySelector('.fa-search')

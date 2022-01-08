@@ -12,11 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .nav-hover:hover .sub-nav {
   opacity: 1;
   overflow: visible;
@@ -191,59 +186,17 @@ img {
 .slider {
   width: 100%;
   position: relative;
-  user-select: none;
 }
 .slider__btn {
-  z-index: 4;
   position: absolute;
   top: 50%;
   display: flex;
-  width: 100%;
   justify-content: space-between;
 }
 .slider__btn div {
-  cursor: pointer;
-  width: 5rem;
-  font-size: 2rem;
-  height: 5rem;
-  align-items: center;
-  box-shadow: 2px 1px 6px #ccc;
-  display: flex;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 2rem;
-  background-color: #fff;
-}
-.slider__dots {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.slider__dots-item.active {
-  background-color: #fff;
-}
-.slider__dots-item {
-  cursor: pointer;
-  width: 2rem;
-  margin: 2rem;
-  border-radius: 50%;
-  height: 2rem;
-  background: rgba(255, 255, 255, 0.3);
-}
-.slider__wraper {
-  width: 100%;
-  overflow: hidden;
-}
-.slider__main {
-  display: flex;
-  transition: all 0.5s linear;
-}
-.slider__main-item {
-  width: auto;
-  flex: 1 0 100%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #000;
 }
 
 .scroll {
@@ -417,6 +370,10 @@ img {
     margin-top: 146px;
   }
 
+  .slider {
+    height: 450px;
+  }
+
   .header__icon-search {
     width: 23px;
   }
@@ -436,6 +393,10 @@ img {
 
   .header__nav-img img {
     height: 50px;
+  }
+
+  .slider {
+    height: 725px;
   }
 
   .footer__brand-title {
@@ -591,4 +552,4 @@ img {
   font-size: 1.3rem;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=sytle.css.map */
