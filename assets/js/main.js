@@ -75,6 +75,13 @@ userHeader.onclick = function() {
     userHeader.classList.toggle('fa-times')
     subUser.classList.toggle('user-active')
 }
+
+var userHeaderMobile = document.querySelector('.icon-mobile')
+var subUserMobile = document.querySelector('.user-sub-mobile')
+userHeaderMobile.onclick = function() {
+    userHeaderMobile.classList.toggle('fa-times')
+    subUserMobile.classList.toggle('user-active')
+}
 // show menu overlay
 var overlaySub = document.querySelectorAll('.overlay-click')
 
